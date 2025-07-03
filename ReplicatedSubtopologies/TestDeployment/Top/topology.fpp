@@ -1,4 +1,31 @@
 
+
+module Rep3 {
+  constant BASE_ID = 0x40000000
+  module Default {
+      constant QUEUE_SIZE = 100
+      constant STACK_SIZE = 10000
+  }
+  include "../../Subtopologies/TestSubtopology/instances.fppi"
+
+  topology Rep3Topology {
+    include "../../Subtopologies/TestSubtopology/topology-body.fppi"
+  }
+}
+
+module Rep4 {
+  constant BASE_ID = 0x50000000
+  module Default {
+      constant QUEUE_SIZE = 100
+      constant STACK_SIZE = 10000
+  }
+  include "../../Subtopologies/TestSubtopology/instances.fppi"
+
+  topology Rep4Topology {
+    include "../../Subtopologies/TestSubtopology/topology-body.fppi"
+  }
+}
+
 module TestDeployment {
 
   # ----------------------------------------------------------------------
@@ -18,10 +45,16 @@ module TestDeployment {
     FILE_DOWNLINK
   }
 
-  topology TestDeployment {
 
+
+  topology TestDeployment {
     import Rep1.Subtopology
     import Rep2.Subtopology
+
+
+    import Rep3.Rep3Topology
+    import Rep4.Rep4Topology
+
     # ----------------------------------------------------------------------
     # Instances used in the topology
     # ----------------------------------------------------------------------
