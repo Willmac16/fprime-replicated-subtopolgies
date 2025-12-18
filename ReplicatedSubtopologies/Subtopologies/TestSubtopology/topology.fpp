@@ -4,7 +4,7 @@ module TestSubtopology {
         constant QUEUE_SIZE = 100
         constant STACK_SIZE = 10000
     }
-    include "./topology-instances.fppi"
+    include "./instances.fppi"
 
     topology Subtopology {
         include "./topology-body.fppi"
