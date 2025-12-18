@@ -1,7 +1,7 @@
 
 
 module Rep3 {
-  constant BASE_ID = 0x40000000
+  constant BASE_ID = 0x30000000
   module Default {
       constant QUEUE_SIZE = 100
       constant STACK_SIZE = 10000
@@ -14,7 +14,7 @@ module Rep3 {
 }
 
 module Rep4 {
-  constant BASE_ID = 0x50000000
+  constant BASE_ID = 0x40000000
   module Default {
       constant QUEUE_SIZE = 100
       constant STACK_SIZE = 10000
