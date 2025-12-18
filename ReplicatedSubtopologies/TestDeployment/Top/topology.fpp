@@ -49,7 +49,7 @@ module TestDeployment {
 
   topology TestDeployment {
     import Rep1.Subtopology
-    import Rep2.Subtopology
+    import Rep2.Rep2Topology
 
 
     import Rep3.Rep3Topology

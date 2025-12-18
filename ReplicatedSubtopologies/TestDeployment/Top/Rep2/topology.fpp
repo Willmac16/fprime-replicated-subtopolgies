@@ -4,5 +4,9 @@ module Rep2 {
         constant QUEUE_SIZE = 100
         constant STACK_SIZE = 10000
     }
-    include "../../../Subtopologies/TestSubtopology/topology-unified.fppi"
+    include "../../../Subtopologies/TestSubtopology/instances.fppi"
+
+    topology Rep2Topology {
+      include "../../../Subtopologies/TestSubtopology/topology-body.fppi"
+    }
 }
