@@ -139,5 +139,6 @@ telemetry packets TestDeploymentPackets {
   Rep2.replicant.TriggerCount
   Rep3.replicant.TriggerCount
   Rep4.replicant.TriggerCount
+  Rep5.replicant.TriggerCount
   TestDeployment.cmdDisp.CommandErrors
 }

@@ -26,6 +26,19 @@ module Rep4 {
   }
 }
 
+module Rep5 {
+  constant BASE_ID = 0x50000000
+  module Default {
+      constant QUEUE_SIZE = 100
+      constant STACK_SIZE = 10000
+  }
+  include "../../Subtopologies/TestSubtopology/instances.fppi"
+
+  topology Rep5Topology {
+    include "../../Subtopologies/TestSubtopology/topology-body.fppi"
+  }
+}
+
 module TestDeployment {
 
   # ----------------------------------------------------------------------
@@ -54,6 +67,7 @@ module TestDeployment {
 
     import Rep3.Rep3Topology
     import Rep4.Rep4Topology
+    import Rep5.Rep5Topology
 
     # ----------------------------------------------------------------------
     # Instances used in the topology
